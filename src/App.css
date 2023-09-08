@@ -1,6 +1,17 @@
-.Myclass{
-    font-size: 30px;
-    color: aqua;
-    text-align: center;
+/* .nav-item .active{
+    border-bottom:2px solid black;
+    color:aqua !important;
+    font-weight: bold;
+} */
 
+fdiv{
+    height: 400px;
+    width: 400px;
+    background-color: crimson;
+    border: 2px solid black;
+}
+/* to contain the all images in div  */
+.myimg{
+object-fit: contain;
+height: fit-content;
 }

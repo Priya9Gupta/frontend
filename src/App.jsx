@@ -1,14 +1,43 @@
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
-// import Login from './components/Login';
 import Signup from './components/Signup';
+import Login from './components/Login';
+import Navbar from './components/Navbar';
+import EventHandling from './components/EventHandling';
+import Todo from './components/Todo';
+import ProductList from './components/ProductList';
+import StateManagement from './components/StateManagement';
+import Socialpost from './components/Socialpost';
+
+
 function App() {
   return (
     <div>
-      <h1>My React app</h1>
-      <Home />
-      {/* <Login /> */}
-      <Signup />
+
+      <BrowserRouter>
+        {/* we use link on the anchor tag always in react */}
+        {/* <Link to="/Login">Login</Link>
+      <Link to="/Signup">Signup</Link> */}
+        <Navbar />
+
+        {/* all react code used in browserrouter */}
+        <Routes>
+
+          <Route path='/' element={<Home />}/>
+          <Route path='Signup' element={<Signup />}/>
+          <Route path='Login' element={<Login />}/>
+          <Route path='EventHandling' element={<EventHandling />} />
+          <Route path='Todo' element={<Todo />} />
+          <Route path='ProductList' element={<ProductList />} />
+          <Route path='StateManagement' element={<StateManagement />} />
+          <Route path='Socialpost' element={<Socialpost />} />
+
+
+
+        </Routes>
+
+      </BrowserRouter>
     </div>
   );
 }
