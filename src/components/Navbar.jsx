@@ -56,6 +56,16 @@ const Navbar = () => {
             SocialPost
           </NavLink>
           </li>
+          <li className="nav-item">
+          <NavLink className="nav-link" to="/Portfolio">
+            Portfolio
+          </NavLink>
+          </li>
+          <li className="nav-item">
+          <NavLink className="nav-link" to="/Contact">
+            Contact
+          </NavLink>
+          </li>
           
 
         <li className="nav-item dropdown">
@@ -76,8 +86,8 @@ const Navbar = () => {
                 EventHandeling
               </NavLink>
             </li>
-            
-            <li>
+          
+           <li>
               <a className="dropdown-item" href="#">
                 Another action
               </a>

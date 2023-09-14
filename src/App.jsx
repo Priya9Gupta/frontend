@@ -9,6 +9,9 @@ import Todo from './components/Todo';
 import ProductList from './components/ProductList';
 import StateManagement from './components/StateManagement';
 import Socialpost from './components/Socialpost';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
+
 
 
 function App() {
@@ -32,6 +35,9 @@ function App() {
           <Route path='ProductList' element={<ProductList />} />
           <Route path='StateManagement' element={<StateManagement />} />
           <Route path='Socialpost' element={<Socialpost />} />
+          <Route path='Portfolio' element={<Portfolio />} />
+          <Route path='Contact' element={<Contact />} />
+
 
 
 

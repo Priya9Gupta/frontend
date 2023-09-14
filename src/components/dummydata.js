@@ -6,7 +6,7 @@ const productData = [
         Image:'https://download.lenovo.com/km/media/images/PD105097/po_ip720_15ikb.jpg' }   ,
     {
         brand:'hp',
-        model:"i5",
+        model:"Pavalion",
         price:'65,999',
         Image:'https://uniquec.com/wp-content/uploads/240-g8-600x450.jpeg'    },
         {
