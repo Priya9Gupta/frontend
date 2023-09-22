@@ -22,14 +22,27 @@ const Signup = () => {
       Lastname: '',
       email: '',
       Password: '',
+      
 
     },
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       console.table(values);
+      
+     const res = await fetch('http://localhost:5000/user/add',{
+       method:'POST',
+       body:JSON.stringify(values),
+       headers : {
+       
+        'Content-Type' : 'application/json',
+        
+       }
+      });
+      console.log(res.status);
+
     },
      validationSchema : SignupSchema
   })
-  // npm i yup run command to apply validation
+  // npm i yup command run to apply validation
 
   return (
     <div className='container' style={{ width: '1600px', height: '800px', border: '2px solid black', backgroundImage: 'url("https://img.freepik.com/premium-photo/spring-nature-concept_52701-112.jpg?w=2000")' }}>
@@ -43,19 +56,19 @@ const Signup = () => {
           <label >First name</label><br />
           <span style={{color:'red',fontSize:'10px',marginLeft:'10px'}} >{signupForm.errors.Firstname}</span>
           
-          <input id="Firstname" onChange={signupForm.handleChange} value={signupForm.values.Firstname} mb-4 style={{ width: '330px', borderRadius: '3px', height: '30px', borderBottom: '2px solid black' }} type="text" placeholder='First name' required /><br />
+          <input id="Firstname" onChange={signupForm.handleChange} value={signupForm.values.Firstname} style={{ width: '330px', borderRadius: '3px', height: '30px', borderBottom: '2px solid black' }} type="text" placeholder='First name' required /><br />
           {/* ******** ****** ******** */}
           <label style={{ marginTop: '20px' }}>Last name</label><br />
           <span style={{color:'red',fontSize:'10px',marginLeft:'10px'}} >{signupForm.errors.Lastname}</span>
-          <input id="Lastname" onChange={signupForm.handleChange} value={signupForm.values.Lastname} mb-4 style={{ width: '330px', borderRadius: '3px', height: '30px', marginTop: '10px' }} type="text" placeholder='Last name' required /><br />
+          <input id="Lastname" onChange={signupForm.handleChange} value={signupForm.values.Lastname}  style={{ width: '330px', borderRadius: '3px', height: '30px', marginTop: '10px' }} type="text" placeholder='Last name' required /><br />
           {/* ******* ****** ******* ***** */}
           <label style={{ marginTop: '20px' }}>Email</label><br />
-          <input id="email" onChange={signupForm.handleChange} value={signupForm.values.email} mb-4 style={{ width: '330px', borderRadius: '3px', height: '30px', marginTop: '10px' }} type="text" placeholder='Your email' required /><br />
+          <input id="email" onChange={signupForm.handleChange} value={signupForm.values.email} style={{ width: '330px', borderRadius: '3px', height: '30px', marginTop: '10px' }} type="text" placeholder='Your email' required /><br />
           {/* ******* ****** ******* ***** */}
 
           <label style={{ marginTop: '20px' }}>Password</label><br />
-          <input id="Password" onChange={signupForm.handleChange} value={signupForm.values.Password} mb-4 style={{ width: '330px', borderRadius: '3px', height: '30px' }} type="password" placeholder='Password' required />
-          <p className='text-center' style={{ fontSize: 'large', marginLeft: '10px', marginTop: '15px' }}>Already a member?<p style={{ color: 'blue' }}>Login</p></p>
+          <input id="Password" onChange={signupForm.handleChange} value={signupForm.values.Password} style={{ width: '330px', borderRadius: '3px', height: '30px' }} type="password" placeholder='Password' required />
+          <p className='text-center' style={{ fontSize: 'large', marginLeft: '10px', marginTop: '15px' }}>Already a member?<span style={{ color: 'blue' }}>Login</span></p>
 
           <button style={{
             height: '40px', width: '100px', backgroundColor: 'black', color: 'white', borderRadius: '5px',

@@ -5,7 +5,7 @@ const Portfolio = () => {
     <div className=' head'style={{height:'1000px',width:'1350px',border:'2px solid black',background:'#23242c'}} >
       
     
-    <div className='navbar text-white text-center'style={{height:'100px', width:'1200px',backgroundColor:'darkslateGrey',marginLeft:'30px',paddingright:'30px'}} >
+    <div className='navbar text-white text-center'style={{height:'100px', width:'1200px',backgroundColor:'darkslateGrey',marginLeft:'30px',paddingright:'30px',border:'2px solid crimson'}} >
      
      <h2 style={{marginLeft:'400px'}}>Personal Portfolio Template</h2></div>
      

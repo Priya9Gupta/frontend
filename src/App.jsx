@@ -11,6 +11,7 @@ import StateManagement from './components/StateManagement';
 import Socialpost from './components/Socialpost';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
+import ManageUsers from './components/ManageUsers';
 
 
 
@@ -37,8 +38,9 @@ function App() {
           <Route path='Socialpost' element={<Socialpost />} />
           <Route path='Portfolio' element={<Portfolio />} />
           <Route path='Contact' element={<Contact />} />
+          <Route path='ManageUsers' element={<ManageUsers />} />
 
-
+          
 
 
         </Routes>
