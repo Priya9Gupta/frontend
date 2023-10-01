@@ -1,7 +1,20 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import useAppContext from '../AppContext'
 
 const Navbar = () => {
+  const{loggedin,logout}=useAppContext();
+   
+  const showOption = () => {
+    if(loggedin){
+      return(
+      <li className='nav-item'>
+        <button className='btn btn-danger' onClick={logout}>Logout</button>
+      </li>
+      )
+    }
+  }
+
   return (
 <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
@@ -42,15 +55,21 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li className="nav-item">
+          <NavLink className="nav-link" to="/ManageProduct">
+            Manage Product
+          </NavLink>
+        </li>
+        <li className="nav-item">
           <NavLink className="nav-link" to="/ProductList">
             ProductList
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink className="nav-link" to="/ManageUsers">
-            ManageUsers
+            Manage User
           </NavLink>
         </li>
+        
         <li className="nav-item">
           <NavLink className="nav-link" to="/StateManagement">
             StateManagement
@@ -91,6 +110,7 @@ const Navbar = () => {
                 EventHandeling
               </NavLink>
             </li>
+            
           
            <li>
               <a className="dropdown-item" href="#">
@@ -107,32 +127,13 @@ const Navbar = () => {
             </li>
           </ul>
         </li>
-        <li className="nav-item">
-          <a
-            className="nav-link disabled"
-            href="#"
-            tabIndex={-1}
-            aria-disabled="true"
-          >
-            Disabled
-          </a>
-        </li>
+       {showOption()}
       </ul>
-      <form className="d-flex">
-        <input
-          className="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button className="btn btn-outline-success" type="submit">
-          Search
-        </button>
-      </form>
+      
     </div>
   </div>
 </nav>
   )
 }
 
-export default Navbar
+export default Navbar;

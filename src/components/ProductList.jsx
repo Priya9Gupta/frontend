@@ -3,7 +3,7 @@ import productData from './dummydata';
 const ProductList = () => {
   // by usestate snippet
   const [productArray, setProductArray] = useState(productData);
-  let brands  = ['Acer','Apple','DELL','hp','Samsung','Vivo','Lenovo'];
+  let brands  = ['Acer','Apple','DELL','hp','Samsung','Vivo','Lenovo','ASUS'];
 
   const searchProduct = (e)=>{
  let search = e.target.value;

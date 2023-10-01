@@ -14,4 +14,4 @@ onClick={()=>{setlikes(likes+1)}}>{likes}likes</button><br />
   )
 }
 
-export default StateManagement
+export default StateManagement;
